@@ -1,11 +1,12 @@
 "use client";
 import { useState } from "react";
 import "./scss/style.css";
+
 export default function Home() {
   const [projects, setProjects] = useState([
     {
       name: "name",
-      balane: "300",
+      balance: "300",
     },
   ]);
   return (

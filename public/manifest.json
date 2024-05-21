@@ -1,6 +1,6 @@
 {
   "name": "Projects Manager",
-  "short_name": "PWA Projects Manager",
+  "short_name": "Projects Manager",
   "icons": [
     {
       "src": "/192x192.png",
@@ -19,8 +19,8 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#333333",
-  "background_color": "#333333",
+  "theme_color": "#1F1D2C",
+  "background_color": "#1F1D2C",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait"

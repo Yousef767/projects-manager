@@ -3,7 +3,7 @@
 export const metadata = {
   manifest : '/manifest.json',
   title: "Projects Manager",
-  description: "PWA Projects Manager",
+  description: "Projects Manager",
 };
 
 export default function RootLayout({ children }) {
