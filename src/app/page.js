@@ -115,11 +115,39 @@ export default function Home() {
     let project = projects.filter((e) => e.id == id);
     if (name !== "" && budget !== 0 && cat !== "0") {
       project[0].name = name;
-      project[0].budget = budget;
+      project[0].budget = +budget;
       project[0].type = cat;
       localStorage.setItem("projects", JSON.stringify(projects));
       updateProjects();
       hideEdit();
+      const total = projects.reduce(
+        (accumulator, currentValue) => accumulator + currentValue.budget,
+        0
+      );
+      setTotal(total);
+      const doneB = projects
+        .filter((e) => e.type === "Done")
+        .reduce(
+          (accumulator, currentValue) => accumulator + currentValue.budget,
+          0
+        );
+      setdoneBudget(doneB);
+      const pendingB = projects
+        .filter((e) => e.type === "Pending")
+        .reduce(
+          (accumulator, currentValue) => accumulator + currentValue.budget,
+          0
+        );
+      setpendingBudget(pendingB);
+      const prepaidB = projects
+        .filter((e) => e.type === "Prepaid")
+        .reduce(
+          (accumulator, currentValue) => accumulator + currentValue.budget,
+          0
+        );
+      setprepaidBudget(prepaidB);
+      const walletB = doneB + prepaidB;
+      setwalletBudget(walletB);
     } else {
       alert("add data");
     }

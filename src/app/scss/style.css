@@ -284,7 +284,7 @@ nav {
   padding: 40px 30px;
   background-color: #262837;
   border-radius: 10px;
-  gap: 40px;
+  gap: 20px;
   align-items: center;
   flex-grow: 1;
   color: #fff;
@@ -293,6 +293,7 @@ nav {
 }
 .dCard span {
   font-size: 1.2em;
+  white-space: nowrap;
 }
 .dCard i {
   font-size: 3.5em;
@@ -352,6 +353,17 @@ nav {
     font-size: 2.5em;
   }
 }
+@media (max-width: 370px) {
+  .balance span {
+    font-size: 1.1em;
+  }
+  .dCard span {
+    white-space: wrap;
+  }
+  .dCard i {
+    font-size: 2.5em;
+  }
+}
 .data {
   width: 100%;
 }
@@ -372,6 +384,14 @@ header i {
   color: #7458fe;
 }
 
+@media (max-width: 550px) {
+  header {
+    font-size: 1.7em;
+  }
+  header i {
+    font-size: 0.7em;
+  }
+}
 .tg {
   width: 100%;
   border-collapse: separate;

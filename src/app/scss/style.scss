@@ -290,7 +290,7 @@ nav {
   padding: 40px 30px;
   background-color: $main;
   border-radius: 10px;
-  gap: 40px;
+  gap: 20px;
   align-items: center;
   flex-grow: 1;
   color: #fff;
@@ -298,6 +298,7 @@ nav {
   justify-content: space-between;
   span {
     font-size: 1.2em;
+    white-space: nowrap;
   }
   i {
     font-size: 3.5em;
@@ -350,6 +351,21 @@ nav {
     }
   }
 }
+@media (max-width: 370px) {
+  .balance {
+    span {
+      font-size: 1.1em;
+    }
+  }
+  .dCard {
+    span {
+      white-space: wrap;
+    }
+    i {
+      font-size: 2.5em;
+    }
+  }
+}
 .data {
   width: 100%;
 }
@@ -369,6 +385,14 @@ header {
   }
 }
 
+@media (max-width:550px) {
+  header {
+    font-size: 1.7em;
+    i {
+      font-size: 0.7em;
+    }
+  }
+}
 .tg {
   width: 100%;
   border-collapse: separate;
