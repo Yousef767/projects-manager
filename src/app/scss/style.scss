@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-$body:#1F1D2C;
-$main:#262837;
-$purpleMain:#7458FE;
-$purpleDark:#9256FA;
-$green:#4AB178;
-$blue:#03A9F4;
-$red:#FF5252;
-$orange:#FFA000;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+$body: #1f1d2c;
+$main: #262837;
+$purpleMain: #7458fe;
+$purpleDark: #9256fa;
+$green: #4ab178;
+$blue: #03a9f4;
+$red: #ff5252;
+$orange: #ffa000;
 
 * {
   margin: 0;
@@ -194,85 +194,100 @@ input[type="checkbox"] {
   opacity: 0;
 }
 
-.box{
+.box {
   max-width: 1200px;
   padding-right: 20px;
   padding-left: 20px;
   margin: 0 auto;
 }
-.box2{
+.box2 {
   max-width: 1300px;
   padding-right: 20px;
   padding-left: 20px;
   margin: 0 auto;
 }
-nav{
+nav {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0;
+  padding-top: 20px;
 }
-.logo{
+.logo {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.app{
+.app {
   display: flex;
   gap: 10px;
   align-items: center;
   color: #fff;
-  img{
+  img {
     width: 60px;
     height: 60px;
     object-fit: cover;
     border-radius: 50%;
   }
-  
 }
-.container{
+.container {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
-.data{
+.data {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 5px;
-  span{
+  span {
     font-size: 1.1em;
     font-weight: 500;
-    &:nth-child(2){
-      opacity: .7;
+    &:nth-child(2) {
+      opacity: 0.7;
       font-weight: 400;
       font-size: 1em;
     }
   }
 }
-.tabel{
+.tabel {
   width: 100%;
   overflow: auto;
+  &::-webkit-scrollbar {
+    height: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background: $main;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $purpleMain;
+  }
 }
-.fa-gear{
+@media (max-width:976px) {
+  .tabel {
+    &::-webkit-scrollbar {
+      height: 0;
+    }
+  }
+}
+.fa-gear {
   font-size: 1.7em;
   color: #fff;
 }
-.flex{
+.flex {
   display: flex;
   justify-content: center;
 }
-.cards{
+.cards {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
   width: 100%;
 }
-.dCard{
+.dCard {
   display: flex;
-  padding:40px 30px;
+  padding: 40px 30px;
   background-color: $main;
   border-radius: 10px;
   gap: 40px;
@@ -281,62 +296,64 @@ nav{
   color: #fff;
   position: relative;
   justify-content: space-between;
-  span{
+  span {
     font-size: 1.2em;
   }
-  i{
+  i {
     font-size: 3.5em;
   }
 }
-.count{
+.count {
   @include flex();
   position: absolute;
-  right: -10px;top: -10px;
-  @include circle(40px);
+  right: -10px;
+  top: -10px;
+  @include circle(30px);
   color: #fff;
   background-color: $purpleDark;
   font-weight: 500;
+  white-space: nowrap;
 }
-.orange{
+.orange {
   color: $orange;
 }
-.red{
+.red {
   color: $red;
 }
-.blue{
+.purple {
+  color: $purpleMain;
+}
+.blue {
   color: $blue;
 }
-.green{
+.green {
   color: $green;
 }
-.balance{
+.Budget {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  span{
+  span {
     text-transform: uppercase;
     font-weight: 500;
-    white-space: nowrap;
   }
-  
 }
-@media (max-width:400px) {
-  .balance{
-    span{
+@media (max-width: 400px) {
+  .balance {
+    span {
       font-size: 1.1em;
     }
-    
   }
-  .dCard{
-    i{
+  .dCard {
+    i {
       font-size: 2.5em;
     }
   }
 }
-.data{
+.data {
   width: 100%;
 }
-header{
+header {
   padding: 20px 0;
   width: 100%;
   text-align: left;
@@ -346,8 +363,8 @@ header{
   display: flex;
   align-items: center;
   gap: 10px;
-  i{
-    font-size: .7em;
+  i {
+    font-size: 0.7em;
     color: $purpleMain;
   }
 }
@@ -398,26 +415,156 @@ header{
   color: $purpleMain;
   font-size: 1em;
 }
-.tools{
+.tools {
   @include flex();
   gap: 15px;
-  select{
+  select {
     @include noBorder();
     background-color: $body;
     height: 35px;
     border-radius: 10px;
     color: #fff;
     color: #fff;
-    padding:0 15px;
+    padding: 0 15px;
   }
-  i{
+  i {
     font-size: 1.3em;
     cursor: pointer;
-    &:nth-child(1){
+    &:nth-child(1) {
       color: $blue;
     }
-    &:nth-child(2){
+    &:nth-child(2) {
       color: $red;
     }
   }
+}
+.p50 {
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.addProject {
+  height: 45px;
+  border-radius: 10px;
+  @include flex();
+  padding: 0 40px;
+  color: #fff;
+  font-size: 1.1em;
+  gap: 10px;
+  background-color: $purpleDark;
+}
+
+
+.input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  label,
+  span {
+    padding-bottom: 10px;
+    font-size: 1em;
+    color: #fff;
+  }
+  input,
+  textarea,
+  select,
+  .filelabel {
+    width: 100%;
+    height: 50px;
+    @include noBorder();
+    border: 1px solid $purpleMain;
+    background-color: $main;
+    color: #fff;
+    padding: 0 15px;
+    border-radius: 5px;
+    font-size: 1em;
+    &::placeholder {
+      color: #fff;
+      opacity: 0.6;
+    }
+  }
+  input[type="date"] {
+    text-align: right;
+    padding: 0 15px;
+  }
+
+  textarea {
+    height: 170px;
+    padding: 10px;
+    resize: none;
+  }
+  select {
+    color: #fff;
+    transition: 0.2s;
+    appearance: none;
+    cursor: pointer;
+  }
+}
+.select {
+  @include flex();
+  position: relative;
+  i {
+    position: absolute;
+    left: 15px;
+    color: #fff;
+    transition: 0.2s;
+    top: 16px;
+  }
+}
+.w100{
+  width: 100%;
+}
+.addForm{
+  @include flex();
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: $body;
+  z-index: 5;
+  overflow: hidden;
+  display: none;
+}
+.inputs {
+  width: 500px;
+  overflow-y: scroll;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  z-index: 2;
+  button {
+    margin-top: 20px;
+  }
+  &::-webkit-scrollbar{
+    width: 0;
+  }
+}
+@media (max-width:550px) {
+  .inputs{
+    width: 100%;
+  }
+}
+.close{
+  position: absolute;
+  width: 100%;
+  height: 100vh;z-index: 1;
+}
+.closex{
+  position: fixed;
+  font-size: 1.5em;
+  top: 10%;
+  right: 7%;
+  z-index: 2;
+  color: #fff;
+  cursor: pointer;
+}
+.noMes{
+  @include flex();
+  color: $red;
+  font-weight: 600;
+  width: 100%;
+  padding: 70px 0;
 }
